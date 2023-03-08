@@ -34,7 +34,9 @@ npm run start
 `page.tsx` 까지 SSR로 처리하고 이하 Component는 [devextreme](https://js.devexpress.com/Documentation/Guide/React_Components/Create_a_DevExtreme_Application/)으로 사이트를 구성하기 때문에 `content.tsx` 부터는 모두 CSR 입니다. `content.tsx`는 필수는 아니지만 서버에서 데이터 가공해서 넘기려면 `content.tsx`처럼 다음 client Component를 만들어서 처리해야 합니다.
 
 devextreme-react import 할때 index를 import하지마세요. 에러납니다.
+
 좋은 예) import Button from 'devextreme-react/button'
+
 나쁜 예) import { Button } from 'devextreme-react'
 
 필요한 데이터는 `page.tsx`에서 불러와 파라미터 형식으로 props를 넘겨줘야 합니다. ([DataFetching](https://beta.nextjs.org/docs/data-fetching/fetching#asyncawait-in-server-components)아직 async/await을 지원하지 않기때문에 비동기로 데이터를 가져올때 에러가 발생할 수 있습니다.)
