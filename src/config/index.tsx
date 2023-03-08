@@ -1,0 +1,22 @@
+export const CREDENTIALS = process.env.CREDENTIALS === 'true'
+
+export const {
+  NODE_ENV,
+  PORT,
+  LOG_FORMAT,
+  LOG_DIR,
+  ORIGIN,
+  REDIS_ADDRESS,
+  REDIS_PORT,
+  REDIS_PREFIX,
+  JWT_ACCESS_KEY,
+  JWT_REFRESH_KEY,
+  SALT_KEY,
+  DB_HOST,
+  DB_PORT,
+  DB_USER,
+  DB_PASSWORD,
+  DB_DATABASE,
+  DB_TIMEZONE,
+  DB_CHARSET,
+} = process.env
