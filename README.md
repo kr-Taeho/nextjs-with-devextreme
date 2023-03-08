@@ -19,8 +19,11 @@ npm run start
 ```
 
 실행시 주소 : [http://localhost:3000](http://localhost:3000)
+
 [appDir](https://beta.nextjs.org/docs/api-reference/next.config.js#appdir) 사용하여 [devextreme](https://js.devexpress.com/Documentation/)으로 사이트 구성했습니다.
+
 [Page Routes](https://beta.nextjs.org/docs/routing/pages-and-layouts) Root Page는 `app/page.tsx`에서 커스텀 할 수 있습니다.
+
 이하 다른 페이지는 `app/...whatever/page.tsx` 경로에서 페이지 커스텀 할 수 있습니다.
 
 기본적으로
@@ -30,7 +33,9 @@ npm run start
 3. `page.tsx`
 
 순으로 페이지를 구성 하여 response 됩니다.
+
 경로마다 `layout.tsx`를 구성 할 수는 있으나 `app/layout.tsx`와 겹칠 수 있습니다.
+
 `page.tsx` 까지 SSR로 처리하고 이하 Component는 [devextreme](https://js.devexpress.com/Documentation/Guide/React_Components/Create_a_DevExtreme_Application/)으로 사이트를 구성하기 때문에 `content.tsx` 부터는 모두 CSR 입니다. `content.tsx`는 필수는 아니지만 서버에서 데이터 가공해서 넘기려면 `content.tsx`처럼 다음 client Component를 만들어서 처리해야 합니다.
 
 devextreme-react import 할때 index를 import하지마세요. 에러납니다.
